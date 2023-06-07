@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+
+</head>
+<body>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: monospace; */
+    height: 100vh;
+  }
+  
+  #container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+  }
+  
+  .card {
+    width: 100%;
+    margin: 1rem;
+    min-height: 15rem;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 5px 19px 0px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .card-left {
+    width: 20rem;
+    height: 21rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card-right {
+    width: 100%;
+    padding: 1rem;
+  }
+    
+.card-left img {
+    /* max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    height: -webkit-fill-available; */
+    width: 150px;
+    height: 200px;
+  }
+  
+  ul,
+  li {
+    margin: 5px 5px 5px 15px;
+    /* font-size: 14px; */
+  }
+  
+  .card-btns{
+    margin: 10px 0 0 0;
+  }
+  .card-btns .btn.btn-info {
+    width: 30%;
+    padding: 10px 40px 10px 40px;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    background-color: #d9531e;
+    text-decoration: none;
+  }
+
+  
+  /* Responsive Styles */
+  @media only screen and (min-width: 320px ) and (max-width:767px) {
+    .card-left{
+        display: none;
+    }
+    .card-right{
+        width: 100%;
+    }
+
+    .card-btns .btn.btn-info{
+        width: 100%;
+    }
+
+  }
+  
+  @media only screen and (min-width: 768px ) and (max-width:1023px) {
+    .card {
+      flex-direction: row;
+    }
+  
+    .card-left {
+      width: 20rem;
+      max-height: none;
+    }
+  
+    .card-right {
+      width: 100%;
+      padding: 1rem 1rem 1rem 2rem;
+    }
+  
+    .card-left img {
+      /* height: 100%; */
+      /* width: auto;
+      height: -webkit-fill-available; */
+    }
+
+    .card-btns .btn.btn-info{
+        width:60%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    /* .card-right {
+      width: calc(100% - 25rem);
+      padding: 1rem 1rem 1rem 4rem;
+    } */
+}
+  
+    </style>
+    <div id="container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+
+    <script>
+        const cardsData = [
+            {
+                id: 1,
+                title: 'VIP Virtual Assist Service',
+                listItems: [
+                    'Our relationship managers will ensure that your application is complete and correct prior to submission, helping prevent delays relating to incorrect or missing information.',
+                    'As part of the DataFlow Group, we are best placed to assist you and will connect with you virtually, at a time that suits you.',
+                    'The Dataflow team will contact you in case of any document insufficiency or requests for additional documents. This will help DataFlow start the verification process without any delay.'
+                ],
+                btnText: 'Get Started',
+                btnUrl: 'https://www.dataflowgroup.com/vip/',
+                imgurl:'images/virtual-svg1.svg'
+            },
+            {
+                id: 2,
+                title: 'Assist Service',
+                listItems: [
+                    'The Applicant Assist service will help you complete your submission in just a fraction of the usual time. One of the DataFlow specialists will complete the remaining form on your behalf.',
+                    'Saves you precious time - Minimal information to be filled by you which would take you less than 15 minutes approximately as opposed to the usual time of up to an hour approximately',
+                    'Receive prioritized communication for any missing pieces of information/documents that can potentially delay your case'
+                ],
+                btnText: 'Get Started',
+                btnUrl: 'https://corp.dataflowgroup.com/verification-services/',
+                imgurl:'images/assist-svg1.svg'
+            },
+            {
+                id: 3,
+                title: 'Self Submission',
+                listItems: [
+                    'Submission of application without any dedicated online assistance from Dataflow.',
+                    'Need to complete the application form and provide the mandatory documents and information.',
+                    'Time-consuming and chances of receiving insufficiency or requests for additional documents.'
+                ],
+                btnText: 'Get Started',
+                btnUrl: 'https://corp.dataflowgroup.com/verification-services/',
+                imgurl:'images/self-svg.svg'
+            }
+        ];
+
+        function createCards() {
+            const cardElements = cardsData.map(cardData => {
+                const listItems = cardData.listItems.map(item => `<li>${item}</li>`).join('');
+                return `
+                    <div class="card" style="display:flex">
+                        <div class="card-left" >
+                          
+                            <img src=${cardData.imgurl}>
+                    </div>
+                    <div class="card-right">
+                        <div class="card-body">
+                            <h2 class="card-title">${cardData.title}</h2>
+                            <ul class="list-group">
+                                ${listItems}
+                            </ul>
+                        </div>
+                        <div class="card-btns">
+                            <a href="${cardData.btnUrl}" class="btn btn-info">${cardData.btnText}</a>
+                        </div>
+                        </div>
+
+                    </div>
+                `;
+            });
+
+            const containerElem = document.getElementById("container");
+            containerElem.innerHTML = cardElements.join("");
+        }
+
+        createCards();
+    </script>
+</body>
+</html>
