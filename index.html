@@ -7,11 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
-
-</head>
-<body>
-    <style>
-        body {
+<style>
+    body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -34,9 +31,37 @@
     min-height: 15rem;
     display: flex;
     flex-direction: row;
-    box-shadow: 0px 5px 19px 0px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     border-radius: 5px;
     border: none;
+    background-color: #f2f3f4;
+  }
+
+  .card-header{
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    display: flex;
+    justify-content: center;
+    background-color: #249990;
+  }
+
+  .card-header p{
+    color:#fff;
+    font-size: x-large;
+    font-weight: bolder;
+    padding: 10px 40px 10px 40px;
+  }
+
+  .cost{
+    padding-left: 10px;
+  }
+
+  .card:hover{
+    border: 1px solid #249990;
+    box-shadow: #249990 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    cursor: pointer;
+    transition: 0.4s;
   }
   
   .card-left {
@@ -51,14 +76,19 @@
     width: 100%;
     padding: 1rem;
   }
+.card-head{
+  display:flex;
+}
+
+  .card-title{
+    color:#d9531e;
+  }
     
 .card-left img {
-    /* max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    height: -webkit-fill-available; */
-    width: 150px;
     height: 200px;
+    border-radius: 10%;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
   
   ul,
@@ -112,12 +142,6 @@
       width: 100%;
       padding: 1rem 1rem 1rem 2rem;
     }
-  
-    .card-left img {
-      /* height: 100%; */
-      /* width: auto;
-      height: -webkit-fill-available; */
-    }
 
     .card-btns .btn.btn-info{
         width:60%;
@@ -125,14 +149,14 @@
   }
   
   @media (min-width: 1024px) {
-    /* .card-right {
-      width: calc(100% - 25rem);
-      padding: 1rem 1rem 1rem 4rem;
-    } */
 }
   
     </style>
-    <div id="container"></div>
+</head>
+<body>
+    <Header><div class="card-header"><p>You can choose from the below mentioned DataFlow services in order to submit your application online</p></div></Header>
+    <div id="container">
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
@@ -146,42 +170,47 @@
                 listItems: [
                     'Our relationship managers will ensure that your application is complete and correct prior to submission, helping prevent delays relating to incorrect or missing information.',
                     'As part of the DataFlow Group, we are best placed to assist you and will connect with you virtually, at a time that suits you.',
-                    'The Dataflow team will contact you in case of any document insufficiency or requests for additional documents. This will help DataFlow start the verification process without any delay.'
+                    'The DataFlow team will contact you in case of any document insufficiency or requests for additional documents. This will help DataFlow start the verification process without any delay.'
                 ],
                 btnText: 'Get Started',
                 btnUrl: 'https://www.dataflowgroup.com/vip/',
-                imgurl:'images/virtual-svg1.svg'
+                imgurl:'images/virtual-svg1.svg',
+                cost:"Cost: USD $200"
             },
             {
                 id: 2,
                 title: 'Assist Service',
                 listItems: [
-                    'The Applicant Assist service will help you complete your submission in just a fraction of the usual time. One of the DataFlow specialists will complete the remaining form on your behalf.',
-                    'Saves you precious time - Minimal information to be filled by you which would take you less than 15 minutes approximately as opposed to the usual time of up to an hour approximately',
-                    'Receive prioritized communication for any missing pieces of information/documents that can potentially delay your case'
+                    'The Applicant Assist service will help you complete your submission in a fraction of the usual time. One of our DataFlow specialists will complete the remaining form on your behalf. ',
+                    'This saves you precious time - minimal information to be filled by you, taking less than 15 minutes as opposed to the usual time of up to one hour.',
+                    'Receive prioritised communication for any missing pieces of information/documents that have the potential to delay your case.'
                 ],
                 btnText: 'Get Started',
                 btnUrl: 'https://corp.dataflowgroup.com/verification-services/',
-                imgurl:'images/assist-svg1.svg'
+                imgurl:'images/assist-svg1.svg',
+                cost:"Cost: USD $40"
             },
             {
                 id: 3,
                 title: 'Self Submission',
                 listItems: [
-                    'Submission of application without any dedicated online assistance from Dataflow.',
-                    'Need to complete the application form and provide the mandatory documents and information.',
-                    'Time-consuming and chances of receiving insufficiency or requests for additional documents.'
+                    'Submission of application completed without any dedicated online assistance from DataFlow.',
+                    'This includes the  completion of the application form and submission of mandatory documents and information. ',
+                    'Application process will take around one hour to complete and applicants have the potential to overlook the submission of essential documents and information, increasing the chances of receving insufficiency or requests for additional documents.'
                 ],
                 btnText: 'Get Started',
                 btnUrl: 'https://corp.dataflowgroup.com/verification-services/',
-                imgurl:'images/self-svg.svg'
+                imgurl:'images/self-svg.svg',
+                cost:""
             }
         ];
 
         function createCards() {
             const cardElements = cardsData.map(cardData => {
                 const listItems = cardData.listItems.map(item => `<li>${item}</li>`).join('');
+                
                 return `
+                
                     <div class="card" style="display:flex">
                         <div class="card-left" >
                           
@@ -189,7 +218,10 @@
                     </div>
                     <div class="card-right">
                         <div class="card-body">
+                            <div class="card-head">
                             <h2 class="card-title">${cardData.title}</h2>
+                            <strong class="cost"><em><small>${cardData.cost}</small></em></strong>
+                            </div>
                             <ul class="list-group">
                                 ${listItems}
                             </ul>
@@ -198,7 +230,6 @@
                             <a href="${cardData.btnUrl}" class="btn btn-info">${cardData.btnText}</a>
                         </div>
                         </div>
-
                     </div>
                 `;
             });
